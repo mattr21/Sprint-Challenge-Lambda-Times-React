@@ -9,7 +9,7 @@ export default class Content extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selected: 'all',
+      selected: '',
       tabs: [],
       cards: []
     };
@@ -20,7 +20,9 @@ export default class Content extends Component {
   }
 
   changeSelected = tab => {
-    // this function should take in the tab and update the state with the new tab.
+    this.setState({
+      selected: tab
+    })
   };
 
   filterCards = () => {
